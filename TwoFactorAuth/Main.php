@@ -12,6 +12,9 @@
                 
                 // Register the callback URL
                  \Idno\Core\site()->addPageHandler('account/twofactorauth','\IdnoPlugins\TwoFactorAuth\Pages\Settings');
+		 
+		 // Replace login
+		 \Idno\Core\site()->addPageHandler('/session/login', '\IdnoPlugins\TwoFactorAuth\Pages\Login', true);
                  
             }
         }
