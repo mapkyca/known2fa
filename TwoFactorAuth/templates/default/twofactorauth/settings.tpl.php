@@ -18,6 +18,9 @@ $user = $session->currentUser();
                 <div class="controls">
 
 		    <?php if (!$user->twofactorauth_enabled) { ?>
+			<p>
+    			    Two factor authentication is a way of adding extra security to your account. Before you can use it you'll need a authentication tool such as Google Authenticator for your phone.
+    			</p>
                         <p>
     			<input type="hidden" name="action" value="enable" />
                             <input type="submit" class="btn btn-large btn-success" value="Enable Two Factor Authentication (recommended)" />
