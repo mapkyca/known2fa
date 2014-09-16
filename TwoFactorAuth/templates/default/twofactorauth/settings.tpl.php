@@ -23,7 +23,7 @@ $user = $session->currentUser();
     			</p>
                         <p>
     			<input type="hidden" name="action" value="enable" />
-                            <input type="submit" class="btn btn-large btn-success" value="Enable Two Factor Authentication (recommended)" />
+                            <input type="submit" class="btn btn-success" value="Enable Two Factor Authentication (recommended)" />
                         </p>
 		    <?php } else { ?>
     		    <div class="explanation">
@@ -36,7 +36,7 @@ $user = $session->currentUser();
     		    </div>
     		    <p>
     			<input type="hidden" name="action" value="disable" />
-                            <input type="submit" class="btn btn-large btn-danger" value="Disable Two Factor Authentication" />
+                            <input type="submit" class="btn btn-danger" value="Disable Two Factor Authentication" />
                         </p>
 		    <?php } ?>
                 </div>
