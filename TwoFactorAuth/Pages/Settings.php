@@ -9,7 +9,7 @@
             {
                 $this->gatekeeper(); // Logged-in users only
                 $t = \Idno\Core\site()->template();
-                $body = $t->__(['login_url' => $login_url])->draw('twofactorauth/settings');
+                $body = $t->__([])->draw('twofactorauth/settings');
                 $t->__(['title' => 'Enable 2FA', 'body' => $body])->drawPage();
             }
 
