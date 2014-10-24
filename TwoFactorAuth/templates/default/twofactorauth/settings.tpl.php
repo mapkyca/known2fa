@@ -5,7 +5,7 @@ $user = $session->currentUser();
 <div class="row">
 
     <div class="span10 offset1">
-        <h1>Post via Email</h1>
+        <h1>Two Factor Auth</h1>
 	<?= $this->draw('account/menu') ?>
     </div>
 
