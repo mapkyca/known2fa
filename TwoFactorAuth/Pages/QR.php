@@ -6,6 +6,9 @@ namespace IdnoPlugins\TwoFactorAuth\Pages {
 
             public function getContent() {
 		
+		$this->setInput('t', 'png'); // We want the library to return PNG
+		$this->setInput('e', 'Q'); // Error correction
+		
 		require_once(dirname(dirname(__FILE__)) . '/Vendor/QR-Generator-PHP-master/php/qr.php');
 		
 	    }
