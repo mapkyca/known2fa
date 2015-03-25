@@ -31,7 +31,11 @@ $user = $session->currentUser();
     			    Please use the following seed value <strong><?= $user->twofactorauth_seed; ?></strong>, or point your authenticator (e.g. Google Authenticator) at the following QR code.
     			</p>
     			<p>
-			    <img src="<?=\Idno\Core\site()->config()->getDisplayURL()?>twofactorauth/qr.png?d=<?= urlencode('otpauth://totp/' . $user->email . "?secret=" . $user->twofactorauth_seed . '&issuer=' . urlencode(\Idno\Core\site()->config()->title)); ?>" />
+			    <?php if (\Idno\Core\site()->currentPage()->isSSL()) { ?>
+				<img src="<?=\Idno\Core\site()->config()->getDisplayURL()?>twofactorauth/qr.png?size=200&d=<?= urlencode('otpauth://totp/' . $user->email . "?secret=" . $user->twofactorauth_seed . '&issuer=' . urlencode(\Idno\Core\site()->config()->title)); ?>" />
+			    <?php } else { ?>
+				<img src="https://chart.googleapis.com/chart?chs=200x200&chld=M|0&cht=qr&chl=<?= urlencode('otpauth://totp/' . $user->email . "?secret=" . $user->twofactorauth_seed . '&issuer=' . urlencode(\Idno\Core\site()->config()->title)); ?>" />
+			    <?php } ?>
     			</p>
     		    </div>
     		    <p>
