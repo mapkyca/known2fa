@@ -22,6 +22,7 @@ Deactivating and reactivating 2fa will regenerate the access code, so be sure to
 Uses
 ----
  * The Google 2FA authenticator module written by Phil from idontplaydarts.com <http://www.idontplaydarts.com/2011/07/google-totp-two-factor-authentication-for-php/>
+ * Local QR generation code by Terence Eden <https://github.com/edent/QR-Generator-PHP>
 
 See
 ---
