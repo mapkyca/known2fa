@@ -15,6 +15,9 @@
 		 
 		 // Replace login
 		 \Idno\Core\site()->addPageHandler('/session/login', '\IdnoPlugins\TwoFactorAuth\Pages\Login', true);
+		 
+		 // QR Code
+		 \Idno\Core\site()->addPageHandler('/twofactorauth/qr\.png', '\IdnoPlugins\TwoFactorAuth\Pages\QR', true);
                  
             }
         }
