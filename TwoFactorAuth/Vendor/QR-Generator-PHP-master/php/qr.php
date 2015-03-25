@@ -65,30 +65,31 @@
 */
 
 //	Path to the data and image files
-$path			= "./../data";		//	You must set path to data files.
-$image_path	= "./../image";	//	You must set path to QRcode frame images.
+$path			= dirname(dirname(__FILE__)) . '/data';		//	You must set path to data files.
+$image_path	= dirname(dirname(__FILE__)) . '/image';	//	You must set path to QRcode frame images.
 
 //	Get the parameters
-$qrcode_error_correct= strtolower($_GET["e"]);
-$qrcode_module_size  = $_GET["s"];
-$qrcode_version      = $_GET["v"];
-$qrcode_raw          = $_GET["raw"];
-$qrcode_image_type   = strtolower($_GET["t"]);
-$qrcode_image_size   = $_GET["size"];
-$qrcode_download     = $_GET["download"];
+$page = \Idno\Core\site()->currentPage();
+$qrcode_error_correct= strtolower($page->getInput("e"));
+$qrcode_module_size  = $page->getInput("s");
+$qrcode_version      = $page->getInput("v");
+$qrcode_raw          = $page->getInput("raw");
+$qrcode_image_type   = strtolower($page->getInput("t"));
+$qrcode_image_size   = $page->getInput("size");
+$qrcode_download     = $page->getInput("download");
 
 if ($qrcode_raw)
 {
-	$qrcode_data_string  = rawurldecode($_GET["d"]);
+	$qrcode_data_string  = rawurldecode($page->getInput("d"));
 } else {
-	$qrcode_data_string  = $_GET["d"];
+	$qrcode_data_string  = $page->getInput("d");
 }
 
 //	Experimental Parameters
-$qrcode_structureappend_n=@$_GET["n"];
-$qrcode_structureappend_m=@$_GET["m"];
-$qrcode_structureappend_parity=@$_GET["p"];
-$qrcode_structureappend_originaldata=@$_GET["o"];
+$qrcode_structureappend_n=@$page->getInput("n");
+$qrcode_structureappend_m=@$page->getInput("m");
+$qrcode_structureappend_parity=@$page->getInput("p");
+$qrcode_structureappend_originaldata=@$page->getInput("o");
 
 
 //	Set the Image Type
@@ -135,10 +136,31 @@ if (strlen($qrcode_data_string) <= 0) {
 $mib = 0;
 
 //	Create the image
-$output_image = imagecreate($qrcode_image_size, $qrcode_image_size);
+
+$output_image = imagecreate((int)$qrcode_image_size, (int)$qrcode_image_size);
+if (!$output_image) {
+    trigger_error("QRcode: Output image not created", E_USER_ERROR);
+    exit;
+}
 
 //	Create the QR Code
-$base_image = createQR();
+$base_image = createQR($qrcode_data_string, 
+				$qrcode_error_correct, 
+				$qrcode_module_size, 
+				$qrcode_version, 
+				$qrcode_image_type, 
+				$qrcode_image_size, 
+				$qrcode_structureappend_n, 
+				$qrcode_structureappend_m, 
+				$qrcode_structureappend_parity,
+				$qrcode_structureappend_originaldata,
+				$mib,
+				$image_path,
+				$path);
+if (!$base_image) {
+    trigger_error("QRcode: Base image not created", E_USER_ERROR);
+    exit;
+}
 
 //	Set the correct content header
 Header("Content-type: image/".$qrcode_image_type);
@@ -177,10 +199,7 @@ exit;
 //	Here be dragons!
 //	Do not edit this code unless you are sure you understand what you are doing
 
-function createQR()
-{
-	//	Global paramaters
-	global	$qrcode_data_string, 
+function createQR($qrcode_data_string, 
 				$qrcode_error_correct, 
 				$qrcode_module_size, 
 				$qrcode_version, 
@@ -190,9 +209,24 @@ function createQR()
 				$qrcode_structureappend_m, 
 				$qrcode_structureappend_parity,
 				$qrcode_structureappend_originaldata,
-				$mib,
+				&$mib,
 				$image_path,
-				$path;
+				$path)
+{
+	//	Global paramaters
+//	global	$qrcode_data_string, 
+//				$qrcode_error_correct, 
+//				$qrcode_module_size, 
+//				$qrcode_version, 
+//				$qrcode_image_type, 
+//				$qrcode_image_size, 
+//				$qrcode_structureappend_n, 
+//				$qrcode_structureappend_m, 
+//				$qrcode_structureappend_parity,
+//				$qrcode_structureappend_originaldata,
+//				$mib,
+//				$image_path,
+//				$path;
 
 	//	This program supports an upper limit of version 40.
 	//	Version 40 has 177 rows and 177 columns, and can encode up to 4,296 alphanumeric characters
