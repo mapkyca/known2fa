@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="span6 offset3 well text-center">
+    <div class="col-md-6 col-md-offset-3 well text-center">
 
 		<h2 class="text-center welcome">Welcome back!</h2>
 
@@ -19,7 +19,7 @@
                    
 		    <p>This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:
 			<input type="text" id="input2FA" name="2fa" placeholder="2fa Code"
-                           class="span4">
+                           class="col-md-4">
 		    </p>
 		    
                 </div>
