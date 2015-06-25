@@ -17,10 +17,8 @@
             <div class="control-group">
                 <div class="controls">
                    
-		    <p>This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:
-			<input type="text" id="input2FA" name="2fa" placeholder="2fa Code"
-                           class="col-md-4">
-		    </p>
+		    <p>This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:</p>
+		    <input type="text" id="input2FA" name="2fa" placeholder="2fa Code">
 		    
                 </div>
             </div>
