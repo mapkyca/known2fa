@@ -18,7 +18,7 @@
                 <div class="controls">
                    
 		    <p>This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:</p>
-		    <input type="text" id="input2FA" name="2fa" placeholder="2fa Code">
+		    <input type="text" id="input2FA" name="2fa" placeholder="2fa Code" autofocus>
 		    
                 </div>
             </div>
