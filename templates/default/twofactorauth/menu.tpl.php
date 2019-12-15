@@ -1,1 +1,1 @@
-<li <?php if ($_SERVER['REQUEST_URI'] == '/account/twofactorauth/') echo 'class="active"'; ?>><a href="/account/twofactorauth/">Two Factor Authentication</a></li>
+<li <?php if ($_SERVER['REQUEST_URI'] == '/account/twofactorauth/') echo 'class="active"'; ?> role="presentation"><a href="/account/twofactorauth/"><?php echo \Idno\Core\Idno::site()->language()->_('Two Factor Authentication'); ?></a></li>

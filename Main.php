@@ -4,6 +4,15 @@ namespace IdnoPlugins\TwoFactorAuth {
 
     class Main extends \Idno\Common\Plugin {
 
+        function registerTranslations()
+        {
+            \Idno\Core\Idno::site()->language()->register(
+               new \Idno\Core\GetTextTranslation(
+                   'twofactorauth', dirname(__FILE__) . '/languages/'
+               )
+            );
+        } // , FILE_APPEND
+
 	function registerPages() {
 
 	    // Register an account menu
