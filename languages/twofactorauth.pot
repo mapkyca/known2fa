@@ -1,13 +1,4 @@
-#: Google2FA.php:82
-msgid "Invalid characters in the base32 string."
-msgstr ""
-
-#: Google2FA.php:114
-msgid "Secret key is too short. Must be at least 16 base32 characters"
-msgstr ""
-
-#: templates/default/twofactorauth/menu.tpl.php:1
-#: templates/default/twofactorauth/settings.tpl.php:8
+#: ./templates/default/twofactorauth/menu.tpl.php:1
 msgid "Two Factor Authentication"
 msgstr ""
 
@@ -19,38 +10,39 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
-#: templates/default/twofactorauth/login.tpl.php:20
-msgid ""
-"This account requires Two Factor Authentication, "
-"please use a tool such as Google Authenticator to generate your access code:"
+#: ./templates/default/twofactorauth/login.tpl.php:20
+msgid "This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:"
 msgstr ""
-""
-""
 
-#: templates/default/twofactorauth/login.tpl.php:21
+#: ./templates/default/twofactorauth/login.tpl.php:21
 msgid "2fa Code"
 msgstr ""
 
-#: templates/default/twofactorauth/login.tpl.php:28
+#: ./templates/default/twofactorauth/login.tpl.php:28
 msgid "Continue..."
 msgstr ""
 
-#: templates/default/twofactorauth/settings.tpl.php:43
-msgid "Disable Two Factor Authentication"
+#: ./templates/default/twofactorauth/settings.tpl.php:22
+msgid "Two factor authentication is a way of adding extra security to your account. Before you can use it you\'ll need a authentication tool such as Google Authenticator for your phone."
 msgstr ""
 
-#: templates/default/twofactorauth/settings.tpl.php:31
-msgid "Please use the following seed value <strong>%s</strong>, or point your authenticator (e.g. Google Authenticator) at the following QR code."
-msgstr ""
-
-#: templates/default/twofactorauth/settings.tpl.php:26
+#: ./templates/default/twofactorauth/settings.tpl.php:26
 msgid "Enable Two Factor Authentication (recommended)"
 msgstr ""
 
-#: templates/default/twofactorauth/settings.tpl.php:22
-msgid ""
-"Two factor authentication is a way of adding extra security to your account. "
-"Before you can use it you'll need a authentication tool such as Google Authenticator for your phone."
+#: ./templates/default/twofactorauth/settings.tpl.php:31
+msgid "Please use the following seed value <strong>%s</strong>, or point your authenticator (e.g. Google Authenticator) at the following QR code."
 msgstr ""
-""
-""
+
+#: ./templates/default/twofactorauth/settings.tpl.php:43
+msgid "Disable Two Factor Authentication"
+msgstr ""
+
+#: ./Google2FA.php:82
+msgid "Invalid characters in the base32 string."
+msgstr ""
+
+#: ./Google2FA.php:114
+msgid "Secret key is too short. Must be at least 16 base32 characters"
+msgstr ""
+
