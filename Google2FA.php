@@ -79,7 +79,7 @@ namespace IdnoPlugins\TwoFactorAuth {
 	    $b32 = strtoupper($b32);
 
 	    if (!preg_match('/^[ABCDEFGHIJKLMNOPQRSTUVWXYZ234567]+$/', $b32, $match))
-		throw new \Exception('Invalid characters in the base32 string.');
+		throw new \Exception(\Idno\Core\Idno::site()->language()->_('Invalid characters in the base32 string.'));
 
 	    $l = strlen($b32);
 	    $n = 0;
@@ -111,7 +111,7 @@ namespace IdnoPlugins\TwoFactorAuth {
 	 * */
 	public static function oath_hotp($key, $counter) {
 	    if (strlen($key) < 8)
-		throw new \Exception('Secret key is too short. Must be at least 16 base 32 characters');
+		throw new \Exception(\Idno\Core\Idno::site()->language()->_('Secret key is too short. Must be at least 16 base32 characters'));
 
 	    $bin_counter = pack('N*', 0) . pack('N*', $counter);  // Counter must be 64-bit int
 	    $hash = hash_hmac('sha1', $bin_counter, $key, true);
