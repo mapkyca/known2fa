@@ -53,6 +53,10 @@ msgstr "Bitte verwenden Sie den folgenden Startwert <strong>%s</strong> oder ver
 msgid "Enable Two Factor Authentication (recommended)"
 msgstr "Aktivieren der Zwei-Faktor-Authentifizierung (empfohlen)"
 
+#: Pages/Settings.php:
+msgid "Enable 2FA"
+msgstr "Aktivieren der Zwei-Faktor-Authentifizierung"
+
 #: templates/default/twofactorauth/settings.tpl.php:22
 msgid ""
 "Two factor authentication is a way of adding extra security to your account. "

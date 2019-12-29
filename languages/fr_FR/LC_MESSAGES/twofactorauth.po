@@ -53,6 +53,10 @@ msgstr "Veuillez utiliser les <strong>%s</strong> de valeur de démarrage suivan
 msgid "Enable Two Factor Authentication (recommended)"
 msgstr "Activer l'authentification à deux facteurs (recommandé)"
 
+#: Pages/Settings.php:
+msgid "Enable 2FA"
+msgstr "Activer l'authentification à deux facteurs"
+
 #: templates/default/twofactorauth/settings.tpl.php:22
 msgid ""
 "Two factor authentication is a way of adding extra security to your account. "
