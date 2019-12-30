@@ -12,26 +12,22 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "Language: de_DE\n"
 
-#: templates/default/twofactorauth/menu.tpl.php:1
-#: templates/default/twofactorauth/settings.tpl.php:8
+#: templates/default/twofactorauth/menu.tpl.php:1 templates/default/twofactorauth/settings.tpl.php:8
 msgid "Two Factor Authentication"
 msgstr "Zwei-Faktor-Authentifizierung"
 
-#: ./templates/default/twofactorauth/login.tpl.php:4
+#: templates/default/twofactorauth/login.tpl.php:4
 msgid "Welcome back!"
 msgstr "Willkommen zurück!"
 
-#: ./templates/default/twofactorauth/login.tpl.php:7
+#: templates/default/twofactorauth/login.tpl.php:7
 msgid "Sign in"
 msgstr "Anmelden"
 
 #: templates/default/twofactorauth/login.tpl.php:20
-msgid ""
-"This account requires Two Factor Authentication, "
-"please use a tool such as Google Authenticator to generate your access code:"
+msgid "This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:"
 msgstr ""
-"Für dieses Konto ist eine Zwei-Faktor-Authentifizierung erforderlich, "
-"verwenden Sie bitte ein Tool wie Google Authenticator, um Ihren Zugriffscode zu generieren:"
+"Für dieses Konto ist eine Zwei-Faktor-Authentifizierung erforderlich, verwenden Sie bitte ein Tool wie Google Authenticator, um Ihren Zugriffscode zu generieren:"
 
 #: templates/default/twofactorauth/login.tpl.php:21
 msgid "2fa Code"
@@ -39,11 +35,11 @@ msgstr "Zugriffscode"
 
 #: templates/default/twofactorauth/login.tpl.php:28
 msgid "Continue..."
-msgstr "Weitergehen..."
+msgstr "Weiter..."
 
 #: templates/default/twofactorauth/settings.tpl.php:43
 msgid "Disable Two Factor Authentication"
-msgstr "Deaktivieren der Zwei-Faktor-Authentifizierung"
+msgstr "Deaktivierung der Zwei-Faktor-Authentifizierung"
 
 #: templates/default/twofactorauth/settings.tpl.php:31
 msgid "Please use the following seed value <strong>%s</strong>, or point your authenticator (e.g. Google Authenticator) at the following QR code."
@@ -59,8 +55,8 @@ msgstr "Aktivieren der Zwei-Faktor-Authentifizierung"
 
 #: templates/default/twofactorauth/settings.tpl.php:22
 msgid ""
-"Two factor authentication is a way of adding extra security to your account. "
-"Before you can use it you'll need a authentication tool such as Google Authenticator for your phone."
+"Two factor authentication is a way of adding extra security to your account. Before you can use it you'll need a authentication tool such as Google Authenticator for "
+"your phone."
 msgstr ""
-"Die Zwei-Faktor-Authentifizierung ist eine Möglichkeit, Ihrem Konto zusätzliche Sicherheit zu geben. "
-"Bevor Sie es verwenden können, benötigen Sie ein Authentifizierungstool wie Google Authenticator für Ihr Handy."
+"Die Zwei-Faktor-Authentifizierung ist eine Möglichkeit, Ihrem Konto zusätzliche Sicherheit zu geben. Bevor Sie es verwenden können, benötigen Sie ein "
+"Authentifizierungstool wie Google Authenticator für Ihr Handy."
