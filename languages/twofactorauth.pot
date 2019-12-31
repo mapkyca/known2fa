@@ -19,6 +19,9 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
+msgid "Sign in: 2fa"
+msgstr ""
+
 #: templates/default/twofactorauth/login.tpl.php:20
 msgid ""
 "This account requires Two Factor Authentication, "
