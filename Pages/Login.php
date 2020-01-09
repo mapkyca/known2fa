@@ -32,7 +32,7 @@ namespace IdnoPlugins\TwoFactorAuth\Pages {
 			    'password' => $this->getInput('password'),
 			    'fwd' => $this->getInput('fwd'),
 			])->draw('twofactorauth/login');
-			$t->title = 'Sign in: 2fa';
+			$t->title = \Idno\Core\Idno::site()->language()->_('Sign in: 2fa');
 			$t->drawPage();
 
 		    } else {

@@ -10,7 +10,7 @@
                 $this->gatekeeper(); // Logged-in users only
                 $t = \Idno\Core\site()->template();
                 $body = $t->__([])->draw('twofactorauth/settings');
-                $t->__(['title' => 'Enable 2FA', 'body' => $body])->drawPage();
+                $t->__(['title' => \Idno\Core\Idno::site()->language()->_('Enable 2FA'), 'body' => $body])->drawPage();
             }
 
             function postContent() {

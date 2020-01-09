@@ -10,6 +10,10 @@ msgstr ""
 msgid "Sign in"
 msgstr ""
 
+#: ./Pages/Login.php:35
+msgid "Sign in: 2fa"
+msgstr ""
+
 #: ./templates/default/twofactorauth/login.tpl.php:20
 msgid "This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:"
 msgstr ""

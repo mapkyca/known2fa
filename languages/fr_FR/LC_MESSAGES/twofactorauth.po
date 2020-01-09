@@ -1,0 +1,62 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.4\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: fr_FR\n"
+
+#: templates/default/twofactorauth/menu.tpl.php:1 templates/default/twofactorauth/settings.tpl.php:8
+msgid "Two Factor Authentication"
+msgstr "Authentification à deux étapes"
+
+#: templates/default/twofactorauth/login.tpl.php:4
+msgid "Welcome back!"
+msgstr "Bienvenue!"
+
+#: templates/default/twofactorauth/login.tpl.php:7
+msgid "Sign in"
+msgstr "Connexion"
+
+#: templates/default/twofactorauth/login.tpl.php:20
+msgid "This account requires Two Factor Authentication, please use a tool such as Google Authenticator to generate your access code:"
+msgstr "Ce compte nécessite une authentification à deux étapes, veuillez utiliser un outil tel que Google Authenticator pour générer votre code d’accès:"
+
+#: templates/default/twofactorauth/login.tpl.php:21
+msgid "2fa Code"
+msgstr "Code de a2e"
+
+#: templates/default/twofactorauth/login.tpl.php:28
+msgid "Continue..."
+msgstr "Continuer..."
+
+#: templates/default/twofactorauth/settings.tpl.php:43
+msgid "Disable Two Factor Authentication"
+msgstr "Déactiver l’authentification à deux étapes"
+
+#: templates/default/twofactorauth/settings.tpl.php:31
+msgid "Please use the following seed value <strong>%s</strong>, or point your authenticator (e.g. Google Authenticator) at the following QR code."
+msgstr ""
+"Veuillez utiliser <strong>%s</strong> comme valeur d’initialisation ou diriger votre outil d’authentification (p. ex. Google Authenticator) vers le code QR suivant."
+
+#: templates/default/twofactorauth/settings.tpl.php:26
+msgid "Enable Two Factor Authentication (recommended)"
+msgstr "Activer l’authentification à deux étapes (recommandé)"
+
+#: Pages/Settings.php:
+msgid "Enable 2FA"
+msgstr "Activer l’authentification à deux étapes"
+
+#: templates/default/twofactorauth/settings.tpl.php:22
+msgid ""
+"Two factor authentication is a way of adding extra security to your account. Before you can use it you'll need a authentication tool such as Google Authenticator "
+"for your phone."
+msgstr ""
+"L’authentification à deux étapes est un moyen d’ajouter une sécurité supplémentaire à votre compte. Avant de pouvoir l’utiliser, vous aurez besoin d’un outil "
+"d’authentification tel que Google Authenticator pour votre téléphone."
